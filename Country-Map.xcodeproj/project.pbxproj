@@ -17,6 +17,8 @@
 		9944AAF11A7847D80073B652 /* Country_MapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAF01A7847D80073B652 /* Country_MapTests.m */; };
 		9944AAFF1A784D920073B652 /* CMDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAFE1A784D920073B652 /* CMDataService.m */; };
 		9944AB041A78554F0073B652 /* Country.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB031A78554F0073B652 /* Country.m */; };
+		9944AB071A78578F0073B652 /* RegionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB061A78578F0073B652 /* RegionsView.m */; };
+		9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB091A7858160073B652 /* RegionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,10 @@
 		9944AAFE1A784D920073B652 /* CMDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataService.m; sourceTree = "<group>"; };
 		9944AB021A78554F0073B652 /* Country.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Country.h; sourceTree = "<group>"; };
 		9944AB031A78554F0073B652 /* Country.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Country.m; sourceTree = "<group>"; };
+		9944AB051A78578F0073B652 /* RegionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionsView.h; sourceTree = "<group>"; };
+		9944AB061A78578F0073B652 /* RegionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionsView.m; sourceTree = "<group>"; };
+		9944AB081A7858160073B652 /* RegionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionViewController.h; sourceTree = "<group>"; };
+		9944AB091A7858160073B652 /* RegionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionViewController.m; sourceTree = "<group>"; };
 		9F75A14AB7B9F40E30A70608 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D0F65AF47B71F9643971F32B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,8 +111,8 @@
 				9944AAFC1A784D2A0073B652 /* API */,
 				9944AB011A7855270073B652 /* Models */,
 				9944AB001A7855140073B652 /* Views */,
-				9944AAFB1A784C5F0073B652 /* App */,
 				9944AAFA1A7847F90073B652 /* Controllers */,
+				9944AAFB1A784C5F0073B652 /* App */,
 				9944AAE11A7847D80073B652 /* Images.xcassets */,
 				9944AAD41A7847D70073B652 /* Supporting Files */,
 			);
@@ -144,6 +150,8 @@
 			children = (
 				9944AADB1A7847D70073B652 /* ViewController.h */,
 				9944AADC1A7847D70073B652 /* ViewController.m */,
+				9944AB081A7858160073B652 /* RegionViewController.h */,
+				9944AB091A7858160073B652 /* RegionViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +179,8 @@
 		9944AB001A7855140073B652 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9944AB051A78578F0073B652 /* RegionsView.h */,
+				9944AB061A78578F0073B652 /* RegionsView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -332,6 +342,8 @@
 				9944AAFF1A784D920073B652 /* CMDataService.m in Sources */,
 				9944AADA1A7847D70073B652 /* AppDelegate.m in Sources */,
 				9944AAD71A7847D70073B652 /* main.m in Sources */,
+				9944AB071A78578F0073B652 /* RegionsView.m in Sources */,
+				9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */,
 				9944AB041A78554F0073B652 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
