@@ -15,4 +15,9 @@ NSString *const kAllCountriesSlug = @"all/";
 NSString *const kRegionSlug = @"region/";
 NSString *const kSubRegionSlug = @"subregion/";
 
+NSString *const kNameKey = @"name";
+NSString *const kRegionKey = @"region";
+NSString *const kSubRegionKey = @"subregion";
+NSString *const kCapitalKey = @"capital";
+
 @end

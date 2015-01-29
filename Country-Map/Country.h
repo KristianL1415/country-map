@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString *subRegion;
 @property (nonatomic, strong) NSString *capital;
 
+- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital;
+
 @end

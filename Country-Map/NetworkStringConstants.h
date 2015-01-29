@@ -15,4 +15,9 @@ extern NSString *const kAllCountriesSlug;
 extern NSString *const kRegionSlug;
 extern NSString *const kSubRegionSlug;
 
+extern NSString *const kNameKey;
+extern NSString *const kRegionKey;
+extern NSString *const kSubRegionKey;
+extern NSString *const kCapitalKey;
+
 @end

@@ -20,8 +20,7 @@
 {
     [super viewDidLoad];
     
-    CMDataService *dataService = [[CMDataService alloc] init];
-    [dataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
+    [CMDataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
         if (error)
         {
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"

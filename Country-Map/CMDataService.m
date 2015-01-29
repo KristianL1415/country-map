@@ -8,11 +8,12 @@
 
 #import "CMDataService.h"
 
+#import "CMDataAdapter.h"
 #import "NetworkStringConstants.h"
 
 @implementation CMDataService
 
-- (void)loadCountriesInRegion:(NSString *)region withBlock:(void (^) (NSArray *dataFields, NSError *error)) block
++ (void)loadCountriesInRegion:(NSString *)region withBlock:(void (^) (NSArray *dataFields, NSError *error)) block
 {
     NSString *urlString = [NSString stringWithFormat:@"%@%@%@", kBaseUrlString, kRegionSlug, region];
     NSURL *requestUrl = [NSURL URLWithString:urlString];
@@ -23,8 +24,8 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         // TODO: Convert to array of countries
-        NSDictionary *response = (NSDictionary *)responseObject;
-        NSArray *countries;
+        NSArray *response = (NSArray *)responseObject; //[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSArray *countries = [CMDataAdapter convertDataToCountries:response];
         block(countries, nil);
     }
     failure:^(AFHTTPRequestOperation *operation, NSError *error) {

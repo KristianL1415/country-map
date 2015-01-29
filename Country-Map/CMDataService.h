@@ -12,6 +12,6 @@
 
 @interface CMDataService : NSObject
 
-- (void)loadCountriesInRegion:(NSString *)region withBlock:(void (^) (NSArray *dataFields, NSError *error)) block;
++ (void)loadCountriesInRegion:(NSString *)region withBlock:(void (^) (NSArray *dataFields, NSError *error)) block;
 
 @end
