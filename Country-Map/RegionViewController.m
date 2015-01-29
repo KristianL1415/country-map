@@ -8,6 +8,7 @@
 
 #import "RegionViewController.h"
 
+#import "RegionsView.h"
 #import "CMDataService.h"
 
 @interface RegionViewController ()
@@ -20,15 +21,14 @@
 {
     [super viewDidLoad];
     
+    self.view = [[RegionsView alloc] init];
+    
     [CMDataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
         if (error)
         {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
-                                                                message:[error localizedDescription]
-                                                               delegate:nil
-                                                      cancelButtonTitle:@"Ok"
-                                                      otherButtonTitles:nil];
-            [alertView show];
+            // TODO: display error alert
+//            self.view
+            
         }
     }];
 }

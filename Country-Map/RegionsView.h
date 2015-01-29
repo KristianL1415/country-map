@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RegionsView : UIView
+#import "CMView.h"
+
+@interface RegionsView : CMView
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 

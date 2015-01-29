@@ -23,8 +23,7 @@
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        // TODO: Convert to array of countries
-        NSArray *response = (NSArray *)responseObject; //[NSJSONSerialization JSONObjectWithData:responseObject options:0 error:nil];
+        NSArray *response = (NSArray *)responseObject;
         NSArray *countries = [CMDataAdapter convertDataToCountries:response];
         block(countries, nil);
     }

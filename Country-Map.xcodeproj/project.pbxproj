@@ -10,7 +10,6 @@
 		53B1BE4F886BB30BF910DB8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB8F50EC3A673E02CB18A7 /* libPods.a */; };
 		9944AAD71A7847D70073B652 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAD61A7847D70073B652 /* main.m */; };
 		9944AADA1A7847D70073B652 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAD91A7847D70073B652 /* AppDelegate.m */; };
-		9944AADD1A7847D70073B652 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AADC1A7847D70073B652 /* ViewController.m */; };
 		9944AAE01A7847D70073B652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944AADE1A7847D70073B652 /* Main.storyboard */; };
 		9944AAE21A7847D80073B652 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9944AAE11A7847D80073B652 /* Images.xcassets */; };
 		9944AAE51A7847D80073B652 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9944AAE31A7847D80073B652 /* LaunchScreen.xib */; };
@@ -21,6 +20,8 @@
 		9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB091A7858160073B652 /* RegionViewController.m */; };
 		9944AB0D1A796C880073B652 /* NetworkStringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB0C1A796C880073B652 /* NetworkStringConstants.m */; };
 		9944AB101A7A91E20073B652 /* CMDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB0F1A7A91E20073B652 /* CMDataAdapter.m */; };
+		9944AB131A7AB12E0073B652 /* CountriesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB121A7AB12E0073B652 /* CountriesView.m */; };
+		9944AB161A7AB2810073B652 /* CMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB151A7AB2810073B652 /* CMView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		9944AAD61A7847D70073B652 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9944AAD81A7847D70073B652 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9944AAD91A7847D70073B652 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9944AADB1A7847D70073B652 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9944AADC1A7847D70073B652 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9944AADF1A7847D70073B652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9944AAE11A7847D80073B652 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9944AAE41A7847D80073B652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +59,10 @@
 		9944AB0C1A796C880073B652 /* NetworkStringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStringConstants.m; sourceTree = "<group>"; };
 		9944AB0E1A7A91E20073B652 /* CMDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMDataAdapter.h; sourceTree = "<group>"; };
 		9944AB0F1A7A91E20073B652 /* CMDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMDataAdapter.m; sourceTree = "<group>"; };
+		9944AB111A7AB12E0073B652 /* CountriesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountriesView.h; sourceTree = "<group>"; };
+		9944AB121A7AB12E0073B652 /* CountriesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountriesView.m; sourceTree = "<group>"; };
+		9944AB141A7AB2810073B652 /* CMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMView.h; sourceTree = "<group>"; };
+		9944AB151A7AB2810073B652 /* CMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMView.m; sourceTree = "<group>"; };
 		9F75A14AB7B9F40E30A70608 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D0F65AF47B71F9643971F32B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,8 +157,6 @@
 		9944AAFA1A7847F90073B652 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9944AADB1A7847D70073B652 /* ViewController.h */,
-				9944AADC1A7847D70073B652 /* ViewController.m */,
 				9944AB081A7858160073B652 /* RegionViewController.h */,
 				9944AB091A7858160073B652 /* RegionViewController.m */,
 			);
@@ -191,6 +192,10 @@
 			children = (
 				9944AB051A78578F0073B652 /* RegionsView.h */,
 				9944AB061A78578F0073B652 /* RegionsView.m */,
+				9944AB111A7AB12E0073B652 /* CountriesView.h */,
+				9944AB121A7AB12E0073B652 /* CountriesView.m */,
+				9944AB141A7AB2810073B652 /* CMView.h */,
+				9944AB151A7AB2810073B652 /* CMView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -348,11 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9944AADD1A7847D70073B652 /* ViewController.m in Sources */,
 				9944AB0D1A796C880073B652 /* NetworkStringConstants.m in Sources */,
 				9944AAFF1A784D920073B652 /* CMDataService.m in Sources */,
 				9944AADA1A7847D70073B652 /* AppDelegate.m in Sources */,
 				9944AB101A7A91E20073B652 /* CMDataAdapter.m in Sources */,
+				9944AB161A7AB2810073B652 /* CMView.m in Sources */,
+				9944AB131A7AB12E0073B652 /* CountriesView.m in Sources */,
 				9944AAD71A7847D70073B652 /* main.m in Sources */,
 				9944AB071A78578F0073B652 /* RegionsView.m in Sources */,
 				9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */,
