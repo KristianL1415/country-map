@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#import "AFNetworking.h"
+
 @interface CMDataService : NSObject
+
+- (void)loadCountriesInRegion:(NSString *)region withBlock:(void (^) (NSArray *dataFields, NSError *error)) block;
 
 @end

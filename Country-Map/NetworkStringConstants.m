@@ -1,0 +1,18 @@
+//
+//  NetworkStringConstants.m
+//  Country-Map
+//
+//  Created by Kristian Lien on 1/28/15.
+//  Copyright (c) 2015 Myriad Mobile, LLC. All rights reserved.
+//
+
+#import "NetworkStringConstants.h"
+
+@implementation NetworkStringConstants
+
+NSString *const kBaseUrlString = @"http://restcountries.eu/rest/v1/";
+NSString *const kAllCountriesSlug = @"all/";
+NSString *const kRegionSlug = @"region/";
+NSString *const kSubRegionSlug = @"subregion/";
+
+@end

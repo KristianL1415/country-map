@@ -8,30 +8,30 @@
 
 #import "RegionViewController.h"
 
+#import "CMDataService.h"
+
 @interface RegionViewController ()
 
 @end
 
 @implementation RegionViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    CMDataService *dataService = [[CMDataService alloc] init];
+    [dataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
+        if (error)
+        {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Retrieving Data"
+                                                                message:[error localizedDescription]
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+    }];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
