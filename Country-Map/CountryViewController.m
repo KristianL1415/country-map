@@ -49,6 +49,8 @@
         cell = [[UITableViewCell alloc] init];
     }
     
+    [cell.textLabel setText:[self.countries[indexPath.row] name]];
+    
     return cell;
 }
 
@@ -68,7 +70,7 @@
 {
     [super viewDidLoad];
     
-    [self loadDataForCountry:@"africa"];
+    [self loadDataForCountry:self.region];
 }
 
 @end

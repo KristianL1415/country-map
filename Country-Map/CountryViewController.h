@@ -12,4 +12,6 @@
 
 @interface CountryViewController : CMViewController
 
+@property (nonatomic, strong) NSString *region;
+
 @end

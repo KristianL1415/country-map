@@ -160,10 +160,7 @@
 				9944AB091A7858160073B652 /* RegionViewController.m */,
 				9944AB171A7BFAA60073B652 /* CountryViewController.h */,
 				9944AB181A7BFAA60073B652 /* CountryViewController.m */,
-				9944AB1A1A7BFC3D0073B652 /* CMViewController.h */,
-				9944AB1B1A7BFC3D0073B652 /* CMViewController.m */,
-				9954830F1A7C0A3800C01A65 /* StringConstants.h */,
-				995483101A7C0A3800C01A65 /* StringConstants.m */,
+				995483121A7C293B00C01A65 /* Helpers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +196,17 @@
 				9944AB031A78554F0073B652 /* Country.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		995483121A7C293B00C01A65 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9944AB1A1A7BFC3D0073B652 /* CMViewController.h */,
+				9944AB1B1A7BFC3D0073B652 /* CMViewController.m */,
+				9954830F1A7C0A3800C01A65 /* StringConstants.h */,
+				995483101A7C0A3800C01A65 /* StringConstants.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		ACF0E20461A940702E07A389 /* Pods */ = {

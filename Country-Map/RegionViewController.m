@@ -8,11 +8,14 @@
 
 #import "RegionViewController.h"
 
+#import "CountryViewController.h"
 #import "StringConstants.h"
 
 @interface RegionViewController ()
 
 @property (nonatomic, strong) NSArray *regions;
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 
@@ -29,6 +32,8 @@
         cell = [[UITableViewCell alloc] init];
     }
     
+    [cell.textLabel setText:[self.regions objectAtIndex:indexPath.row]];
+    
     return cell;
 }
 
@@ -39,7 +44,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Segue to country vc
+    [self performSegueWithIdentifier:kCountriesSegue sender:nil];
 }
 
 #pragma mark - Override Methods
@@ -48,7 +53,17 @@
 {
     [super viewDidLoad];
     
-    self.regions = [[NSArray alloc] initWithObjects:kAmericasRegion, kEuropeRegion, kAsiaRegion, kAfricaRegion, kOceaniaRegion, nil];
+    self.regions = [[NSArray alloc] initWithObjects:kAmericasRegion.capitalizedString, kEuropeRegion.capitalizedString, kAsiaRegion.capitalizedString, kAfricaRegion.capitalizedString, kOceaniaRegion.capitalizedString, nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kCountriesSegue])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CountryViewController *destinationController = segue.destinationViewController;
+        [destinationController setRegion:[self.regions objectAtIndex:indexPath.row]];
+    }
 }
 
 @end

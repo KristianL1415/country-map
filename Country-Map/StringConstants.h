@@ -12,6 +12,7 @@
 
 extern NSString *const kRegionCell;
 extern NSString *const kCountryCell;
+extern NSString *const kCountriesSegue;
 
 extern NSString *const kAfricaRegion;
 extern NSString *const kAmericasRegion;

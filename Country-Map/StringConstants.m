@@ -12,8 +12,9 @@
 
 NSString *const kRegionCell = @"RegionCell";
 NSString *const kCountryCell = @"CountryCell";
+NSString *const kCountriesSegue = @"CountriesSegue";
 
-NSString *const kAfricaRegion = @"asia";
+NSString *const kAfricaRegion = @"africa";
 NSString *const kAmericasRegion = @"americas";
 NSString *const kEuropeRegion = @"europe";
 NSString *const kAsiaRegion = @"asia";
