@@ -8,9 +8,6 @@
 
 #import "RegionViewController.h"
 
-#import "RegionsView.h"
-#import "CMDataService.h"
-
 @interface RegionViewController ()
 
 @end
@@ -20,17 +17,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.view = [[RegionsView alloc] init];
-    
-    [CMDataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
-        if (error)
-        {
-            // TODO: display error alert
-//            self.view
-            
-        }
-    }];
 }
 
 @end

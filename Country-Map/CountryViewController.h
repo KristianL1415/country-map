@@ -1,8 +1,8 @@
 //
-//  RegionViewController.h
+//  CountryViewController.h
 //  Country-Map
 //
-//  Created by Kristian Lien on 1/27/15.
+//  Created by Kristian Lien on 1/30/15.
 //  Copyright (c) 2015 Myriad Mobile, LLC. All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 #import "CMViewController.h"
 
-@interface RegionViewController : CMViewController
+@interface CountryViewController : CMViewController
 
 @end
