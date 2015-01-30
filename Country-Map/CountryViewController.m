@@ -8,6 +8,7 @@
 
 #import "CountryViewController.h"
 
+#import "CountryDetailViewController.h"
 #import "CMDataService.h"
 #import "StringConstants.h"
 
@@ -61,7 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [self performSegueWithIdentifier:kCountryDetailSegue sender:nil];
 }
 
 #pragma mark - Override Methods
@@ -71,6 +72,16 @@
     [super viewDidLoad];
     
     [self loadDataForCountry:self.region];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kCountryDetailSegue])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CountryDetailViewController *destinationController = segue.destinationViewController;
+        [destinationController setCountry:[self.countries objectAtIndex:indexPath.row]];
+    }
 }
 
 @end
