@@ -9,8 +9,13 @@
 #import "CountryViewController.h"
 
 #import "CMDataService.h"
+#import "StringConstants.h"
 
 @interface CountryViewController ()
+
+@property (nonatomic, strong) NSArray *countries;
+
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 
@@ -20,12 +25,41 @@
 
 - (void)loadDataForCountry:(NSString *)country
 {
-    [CMDataService loadCountriesInRegion:@"africa" withBlock:^(NSArray *data, NSError *error) {
+    [CMDataService loadCountriesInRegion:country withBlock:^(NSArray *data, NSError *error) {
         if (error)
         {
-            [self displayError:@"Error Retreiving Data" error:error];            
+            [self displayError:@"Error Retrieving Data" error:error];
+        }
+        else
+        {
+            self.countries = data;
+            [self.tableView reloadData];
         }
     }];
+}
+
+#pragma mark - Table View Methods
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:kCountryCell];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] init];
+    }
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.countries count];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 #pragma mark - Override Methods
