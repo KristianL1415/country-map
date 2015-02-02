@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 #import "CMViewController.h"
 #import "Country.h"
 
-@interface CountryDetailViewController : CMViewController
+@interface CountryDetailViewController : CMViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) Country *country;
 

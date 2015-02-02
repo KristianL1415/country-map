@@ -10,7 +10,7 @@
 
 @implementation Country
 
-- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital
+- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital latitude:(double)lat longitude:(double)lng
 {
     self = [super init];
     
@@ -20,6 +20,8 @@
         self.region = region;
         self.subRegion = subRegion;
         self.capital = capital;
+        self.latitude = lat;
+        self.longitude = lng;
     }
     
     return self;

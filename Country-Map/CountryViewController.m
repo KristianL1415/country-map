@@ -62,7 +62,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:kCountryDetailSegue sender:nil];
+    
 }
 
 #pragma mark - Override Methods

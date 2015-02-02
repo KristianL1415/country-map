@@ -14,7 +14,9 @@
 @property (nonatomic, strong) NSString *region;
 @property (nonatomic, strong) NSString *subRegion;
 @property (nonatomic, strong) NSString *capital;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
 
-- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital;
+- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital latitude:(double)lat longitude:(double)lng;
 
 @end

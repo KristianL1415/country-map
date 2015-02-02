@@ -10,6 +10,7 @@
 
 @interface CountryDetailViewController ()
 
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UILabel *nameLabel;
 @property (nonatomic, strong) IBOutlet UILabel *regionLabel;
 @property (nonatomic, strong) IBOutlet UILabel *subRegionLabel;
@@ -23,6 +24,8 @@
 
 - (void)setupInterface
 {
+    [self.mapView setDelegate:self];
+    
     [self.navigationItem setTitle:[self.country name]];
     [self.nameLabel setText:[self.country name]];
     [self.regionLabel setText:[self.country region]];
