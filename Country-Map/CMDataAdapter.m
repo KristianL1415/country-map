@@ -28,8 +28,14 @@
 
 + (Country *)convertDataToCountry:(NSDictionary *)countryData
 {
-    double lat = [[countryData[kLatLngKey] objectAtIndex:0] doubleValue];
-    double lng = [[countryData[kLatLngKey] objectAtIndex:1] doubleValue];
+    double lat = 0.0;
+    double lng = 0.0;
+    
+    if ([countryData[kLatLngKey] count] > 0)
+    {
+        lat = [[countryData[kLatLngKey] objectAtIndex:0] doubleValue];
+        lng = [[countryData[kLatLngKey] objectAtIndex:1] doubleValue];
+    }
     
     Country *country = [[Country alloc] initWithName:countryData[kNameKey]
                                               region:countryData[kRegionKey]

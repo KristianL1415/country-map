@@ -24,13 +24,23 @@
 
 - (void)setupInterface
 {
-    [self.mapView setDelegate:self];
-    
     [self.navigationItem setTitle:[self.country name]];
     [self.nameLabel setText:[self.country name]];
     [self.regionLabel setText:[self.country region]];
     [self.subRegionLabel setText:[self.country subRegion]];
     [self.capitalLabel setText:[self.country capital]];
+}
+
+- (void)setupMapView
+{
+    [self.mapView setDelegate:self];
+    
+    CLLocationCoordinate2D countryLocation = CLLocationCoordinate2DMake(self.country.latitude, self.country.longitude);
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(countryLocation, 1000000, 1000000);
+    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+    
+    [self.mapView setRegion:adjustedRegion animated:YES];
 }
 
 #pragma mark - Override Methods
@@ -40,6 +50,7 @@
     [super viewDidLoad];
 
     [self setupInterface];
+    [self setupMapView];
 }
 
 @end
