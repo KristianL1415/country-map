@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		53B1BE4F886BB30BF910DB8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57AB8F50EC3A673E02CB18A7 /* libPods.a */; };
 		991BBEAC1A7FDEBA00742AFD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991BBEAB1A7FDEBA00742AFD /* MapKit.framework */; };
+		991BBEAF1A800EE800742AFD /* CMMapViewExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BBEAE1A800EE800742AFD /* CMMapViewExtension.m */; };
+		991BBEB21A80118D00742AFD /* Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 991BBEB11A80118D00742AFD /* Region.m */; };
 		9944AAD71A7847D70073B652 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAD61A7847D70073B652 /* main.m */; };
 		9944AADA1A7847D70073B652 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AAD91A7847D70073B652 /* AppDelegate.m */; };
 		9944AAE01A7847D70073B652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944AADE1A7847D70073B652 /* Main.storyboard */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		57AB8F50EC3A673E02CB18A7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		991BBEAB1A7FDEBA00742AFD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		991BBEAD1A800EE800742AFD /* CMMapViewExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMMapViewExtension.h; sourceTree = "<group>"; };
+		991BBEAE1A800EE800742AFD /* CMMapViewExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMMapViewExtension.m; sourceTree = "<group>"; };
+		991BBEB01A80118D00742AFD /* Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Region.h; sourceTree = "<group>"; };
+		991BBEB11A80118D00742AFD /* Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Region.m; sourceTree = "<group>"; };
 		9944AAD11A7847D70073B652 /* Country-Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country-Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9944AAD51A7847D70073B652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9944AAD61A7847D70073B652 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -205,6 +211,8 @@
 			children = (
 				9944AB021A78554F0073B652 /* Country.h */,
 				9944AB031A78554F0073B652 /* Country.m */,
+				991BBEB01A80118D00742AFD /* Region.h */,
+				991BBEB11A80118D00742AFD /* Region.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -214,6 +222,8 @@
 			children = (
 				9954830F1A7C0A3800C01A65 /* StringConstants.h */,
 				995483101A7C0A3800C01A65 /* StringConstants.m */,
+				991BBEAD1A800EE800742AFD /* CMMapViewExtension.h */,
+				991BBEAE1A800EE800742AFD /* CMMapViewExtension.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -363,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9944AB0D1A796C880073B652 /* NetworkStringConstants.m in Sources */,
+				991BBEAF1A800EE800742AFD /* CMMapViewExtension.m in Sources */,
 				9944AAFF1A784D920073B652 /* CMDataService.m in Sources */,
 				9944AADA1A7847D70073B652 /* AppDelegate.m in Sources */,
 				9944AB101A7A91E20073B652 /* CMDataAdapter.m in Sources */,
@@ -371,6 +382,7 @@
 				995483111A7C0A3800C01A65 /* StringConstants.m in Sources */,
 				995483151A7C3FEC00C01A65 /* CountryDetailViewController.m in Sources */,
 				9944AB1C1A7BFC3D0073B652 /* CMViewController.m in Sources */,
+				991BBEB21A80118D00742AFD /* Region.m in Sources */,
 				9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */,
 				9944AB041A78554F0073B652 /* Country.m in Sources */,
 			);

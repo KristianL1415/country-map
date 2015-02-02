@@ -8,6 +8,8 @@
 
 #import "CountryDetailViewController.h"
 
+#import "CMMapViewExtension.h"
+
 @interface CountryDetailViewController ()
 
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
@@ -37,10 +39,9 @@
     
     CLLocationCoordinate2D countryLocation = CLLocationCoordinate2DMake(self.country.latitude, self.country.longitude);
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(countryLocation, self.country.area * 0.6 + 200000, self.country.area * 0.6 + 200000);
-    MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
+    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountryCoordinate:countryLocation withArea:self.country.area mapView:self.mapView];
     
-    [self.mapView setRegion:adjustedRegion animated:YES];
+    [self.mapView setRegion:region animated:YES];
 }
 
 #pragma mark - Override Methods
