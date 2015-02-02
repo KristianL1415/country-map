@@ -20,5 +20,6 @@ NSString *const kRegionKey = @"region";
 NSString *const kSubRegionKey = @"subregion";
 NSString *const kCapitalKey = @"capital";
 NSString *const kLatLngKey = @"latlng";
+NSString *const kAreaKey = @"area";
 
 @end

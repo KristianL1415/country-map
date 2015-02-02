@@ -30,11 +30,16 @@
 {
     double lat = 0.0;
     double lng = 0.0;
+    double area = 0.0;
     
     if ([countryData[kLatLngKey] count] > 0)
     {
         lat = [[countryData[kLatLngKey] objectAtIndex:0] doubleValue];
         lng = [[countryData[kLatLngKey] objectAtIndex:1] doubleValue];
+    }
+    if (countryData[kAreaKey] != (id)[NSNull null])
+    {
+        area = [countryData[kAreaKey] doubleValue];
     }
     
     Country *country = [[Country alloc] initWithName:countryData[kNameKey]
@@ -42,7 +47,8 @@
                                            subRegion:countryData[kSubRegionKey]
                                              capital:countryData[kCapitalKey]
                                             latitude:lat
-                                           longitude:lng];
+                                           longitude:lng
+                                                area:area];
     
     return country;
 }

@@ -37,7 +37,7 @@
     
     CLLocationCoordinate2D countryLocation = CLLocationCoordinate2DMake(self.country.latitude, self.country.longitude);
     
-    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(countryLocation, 1000000, 1000000);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(countryLocation, self.country.area * 0.6 + 200000, self.country.area * 0.6 + 200000);
     MKCoordinateRegion adjustedRegion = [self.mapView regionThatFits:viewRegion];
     
     [self.mapView setRegion:adjustedRegion animated:YES];

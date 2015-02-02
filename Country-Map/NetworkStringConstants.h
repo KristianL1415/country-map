@@ -20,5 +20,6 @@ extern NSString *const kRegionKey;
 extern NSString *const kSubRegionKey;
 extern NSString *const kCapitalKey;
 extern NSString *const kLatLngKey;
+extern NSString *const kAreaKey;
 
 @end
