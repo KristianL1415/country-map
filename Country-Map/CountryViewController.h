@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 #import "CMViewController.h"
 #import "SubRegion.h"
 
-@interface CountryViewController : CMViewController
+@interface CountryViewController : CMViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) SubRegion *subRegion;
 

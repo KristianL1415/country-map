@@ -314,6 +314,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Countries" id="zIx-kO-71g"/>
                     <connections>
+                        <outlet property="mapView" destination="H1O-Ai-HEV" id="Ppn-d1-s0S"/>
                         <outlet property="tableView" destination="Oga-RG-owP" id="EiS-k5-69o"/>
                     </connections>
                 </viewController>

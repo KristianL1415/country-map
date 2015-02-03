@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 #import "CMViewController.h"
 
-@interface SubRegionViewController : CMViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SubRegionViewController : CMViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSString *region;
 

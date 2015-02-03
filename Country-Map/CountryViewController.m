@@ -9,13 +9,15 @@
 #import "CountryViewController.h"
 
 #import "CountryDetailViewController.h"
-#import "CMDataService.h"
+#import "CMMapViewExtension.h"
 #import "StringConstants.h"
+#import "CMDataService.h"
 
 @interface CountryViewController ()
 
 @property (nonatomic, strong) NSArray *countries;
 
+@property (nonatomic, strong) IBOutlet MKMapView *mapView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
@@ -28,17 +30,15 @@
 {
     self.countries = [self.subRegion countries];
     [self.tableView reloadData];
-//    [CMDataService loadCountriesInSubRegion:subRegion.name withBlock:^(NSArray *data, NSError *error) {
-//        if (error)
-//        {
-//            [self displayError:@"Error Retrieving Data" error:error];
-//        }
-//        else
-//        {
-//            self.countries = data;
-//            [self.tableView reloadData];
-//        }
-//    }];
+}
+
+- (void)setupMapView
+{
+    [self.mapView setDelegate:self];
+    
+    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountries:self.countries mapView:self.mapView];
+    
+    [self.mapView setRegion:region animated:YES];
 }
 
 #pragma mark - Table View Methods
@@ -74,6 +74,7 @@
     [super viewDidLoad];
     
     [self loadCountriesForSubRegion:self.subRegion];
+    [self setupMapView];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
