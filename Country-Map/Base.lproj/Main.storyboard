@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="G01-bf-de5" kind="push" identifier="CountriesSegue" id="xMY-dm-oO1"/>
+                                            <segue destination="G01-bf-de5" kind="push" identifier="SubRegionsSegue" id="xMY-dm-oO1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="833" y="451"/>
         </scene>
-        <!--Countries-->
+        <!--SubRegions-->
         <scene sceneID="st8-9D-YT3">
             <objects>
-                <viewController id="G01-bf-de5" customClass="CountryViewController" sceneMemberID="viewController">
+                <viewController id="G01-bf-de5" customClass="SubRegionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i6e-fq-hFK"/>
                         <viewControllerLayoutGuide type="bottom" id="sah-t7-4hY"/>
@@ -71,14 +71,14 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountryCell" id="FnK-eK-XRg">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubRegionCell" id="FnK-eK-XRg">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FnK-eK-XRg" id="Xpn-NL-DtH">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="t4Z-5s-3BX" kind="push" identifier="CountryDetailSegue" id="sgY-n3-hbi"/>
+                                            <segue destination="Uqj-ID-ixd" kind="push" identifier="CountriesSegue" id="ipu-1h-TdX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -96,7 +96,7 @@
                             <constraint firstAttribute="centerX" secondItem="VsY-Zz-XmQ" secondAttribute="centerX" id="VHI-na-QJK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Countries" id="P5e-UV-Hep"/>
+                    <navigationItem key="navigationItem" title="SubRegions" id="P5e-UV-Hep"/>
                     <connections>
                         <outlet property="tableView" destination="VsY-Zz-XmQ" id="jLG-td-UvQ"/>
                     </connections>
@@ -241,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kqj-wl-UzU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="451"/>
+            <point key="canvasLocation" x="2120" y="451"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="doB-AV-K6h">
@@ -260,6 +260,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUb-S6-uO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301" y="451"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="UDz-xO-ABt">
+            <objects>
+                <viewController id="Uqj-ID-ixd" customClass="CountryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QoM-zq-jjH"/>
+                        <viewControllerLayoutGuide type="bottom" id="M4H-wr-ziB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LmQ-yv-Ra7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="H1O-Ai-HEV">
+                                <rect key="frame" x="0.0" y="64" width="320" height="175"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Oga-RG-owP">
+                                <rect key="frame" x="0.0" y="247" width="320" height="321"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="321" id="76L-PM-bDF"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CountryCell" id="GhK-4g-wma">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GhK-4g-wma" id="T7D-eI-IeF">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="t4Z-5s-3BX" kind="push" identifier="CountryDetailSegue" id="Tyy-uh-d1A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Uqj-ID-ixd" id="dxd-BA-tDj"/>
+                                    <outlet property="delegate" destination="Uqj-ID-ixd" id="nhU-IW-GEf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H1O-Ai-HEV" firstAttribute="top" secondItem="QoM-zq-jjH" secondAttribute="bottom" id="2cd-Bt-HkJ"/>
+                            <constraint firstItem="Oga-RG-owP" firstAttribute="top" secondItem="H1O-Ai-HEV" secondAttribute="bottom" constant="8" id="SSr-GX-VAf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H1O-Ai-HEV" secondAttribute="trailing" constant="-16" id="ZnG-bX-Wkn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Oga-RG-owP" secondAttribute="trailing" constant="-16" id="bd6-1Z-enP"/>
+                            <constraint firstItem="H1O-Ai-HEV" firstAttribute="leading" secondItem="LmQ-yv-Ra7" secondAttribute="leadingMargin" constant="-16" id="dAc-fs-izq"/>
+                            <constraint firstAttribute="centerX" secondItem="H1O-Ai-HEV" secondAttribute="centerX" id="h1l-xQ-tJx"/>
+                            <constraint firstItem="Oga-RG-owP" firstAttribute="leading" secondItem="LmQ-yv-Ra7" secondAttribute="leadingMargin" constant="-16" id="ifb-ze-E1D"/>
+                            <constraint firstItem="M4H-wr-ziB" firstAttribute="top" secondItem="Oga-RG-owP" secondAttribute="bottom" id="xlg-LZ-Awh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Countries" id="zIx-kO-71g"/>
+                    <connections>
+                        <outlet property="tableView" destination="Oga-RG-owP" id="EiS-k5-69o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvV-Vr-OWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1696" y="451"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

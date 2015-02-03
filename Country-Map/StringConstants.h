@@ -11,7 +11,9 @@
 @interface StringConstants : NSObject
 
 extern NSString *const kRegionCell;
+extern NSString *const kSubRegionCell;
 extern NSString *const kCountryCell;
+extern NSString *const kSubRegionsSegue;
 extern NSString *const kCountriesSegue;
 extern NSString *const kCountryDetailSegue;
 

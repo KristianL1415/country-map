@@ -11,14 +11,16 @@
 @implementation StringConstants
 
 NSString *const kRegionCell = @"RegionCell";
+NSString *const kSubRegionCell = @"SubRegionCell";
 NSString *const kCountryCell = @"CountryCell";
+NSString *const kSubRegionsSegue = @"SubRegionsSegue";
 NSString *const kCountriesSegue = @"CountriesSegue";
 NSString *const kCountryDetailSegue = @"CountryDetailSegue";
 
-NSString *const kAfricaRegion = @"africa";
-NSString *const kAmericasRegion = @"americas";
-NSString *const kEuropeRegion = @"europe";
-NSString *const kAsiaRegion = @"asia";
-NSString *const kOceaniaRegion = @"oceania";
+NSString *const kAfricaRegion = @"Africa";
+NSString *const kAmericasRegion = @"Americas";
+NSString *const kEuropeRegion = @"Europe";
+NSString *const kAsiaRegion = @"Asia";
+NSString *const kOceaniaRegion = @"Oceania";
 
 @end

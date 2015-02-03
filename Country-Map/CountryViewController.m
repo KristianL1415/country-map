@@ -24,19 +24,21 @@
 
 #pragma mark - Instance Methods
 
-- (void)loadDataForCountry:(NSString *)country
+- (void)loadCountriesForSubRegion:(SubRegion *)subRegion
 {
-    [CMDataService loadCountriesInRegion:country withBlock:^(NSArray *data, NSError *error) {
-        if (error)
-        {
-            [self displayError:@"Error Retrieving Data" error:error];
-        }
-        else
-        {
-            self.countries = data;
-            [self.tableView reloadData];
-        }
-    }];
+    self.countries = [self.subRegion countries];
+    [self.tableView reloadData];
+//    [CMDataService loadCountriesInSubRegion:subRegion.name withBlock:^(NSArray *data, NSError *error) {
+//        if (error)
+//        {
+//            [self displayError:@"Error Retrieving Data" error:error];
+//        }
+//        else
+//        {
+//            self.countries = data;
+//            [self.tableView reloadData];
+//        }
+//    }];
 }
 
 #pragma mark - Table View Methods
@@ -71,7 +73,7 @@
 {
     [super viewDidLoad];
     
-    [self loadDataForCountry:self.region];
+    [self loadCountriesForSubRegion:self.subRegion];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

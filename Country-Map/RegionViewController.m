@@ -8,7 +8,7 @@
 
 #import "RegionViewController.h"
 
-#import "CountryViewController.h"
+#import "SubRegionViewController.h"
 #import "StringConstants.h"
 
 @interface RegionViewController ()
@@ -53,15 +53,15 @@
 {
     [super viewDidLoad];
     
-    self.regions = [[NSArray alloc] initWithObjects:kAmericasRegion.capitalizedString, kEuropeRegion.capitalizedString, kAsiaRegion.capitalizedString, kAfricaRegion.capitalizedString, kOceaniaRegion.capitalizedString, nil];
+    self.regions = [[NSArray alloc] initWithObjects:kAmericasRegion, kEuropeRegion, kAsiaRegion, kAfricaRegion, kOceaniaRegion, nil];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:kCountriesSegue])
+    if ([segue.identifier isEqualToString:kSubRegionsSegue])
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        CountryViewController *destinationController = segue.destinationViewController;
+        SubRegionViewController *destinationController = segue.destinationViewController;
         [destinationController setRegion:[self.regions objectAtIndex:indexPath.row]];
     }
 }

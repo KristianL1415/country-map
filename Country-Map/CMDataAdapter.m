@@ -9,9 +9,42 @@
 #import "CMDataAdapter.h"
 
 #import "NetworkStringConstants.h"
+#import "SubRegion.h"
 #import "Country.h"
 
 @implementation CMDataAdapter
+
++ (NSArray *)convertDataToSubRegions:(NSArray *)countryData
+{
+    NSMutableArray *subRegions = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *country in countryData)
+    {
+        BOOL subRegionExists = NO;
+        
+        // Check if subregion already exists
+        for (SubRegion *subRegion in subRegions)
+        {
+            NSString *curSubRegionName = country[kSubRegionKey];
+            
+            // If yes, add country to the subregion
+            if ([curSubRegionName isEqualToString:subRegion.name])
+            {
+                Country *curCountry = [self convertDataToCountry:country];
+                [subRegion.countries addObject:curCountry];
+                subRegionExists = YES;
+            }
+        }
+        // Otherwise add new subregion
+        if (subRegionExists == NO)
+        {
+            SubRegion *newSubRegion = [self convertDataToSubRegion:country];
+            [subRegions addObject:newSubRegion];
+        }
+    }
+    
+    return subRegions;
+}
 
 + (NSArray *)convertDataToCountries:(NSArray *)countryData
 {
@@ -24,6 +57,21 @@
     }
     
     return countries;
+}
+
+#pragma mark - Private Methods
+
++ (SubRegion *)convertDataToSubRegion:(NSDictionary *)countryData
+{
+    NSString *name = countryData[kSubRegionKey];
+    NSString *regionName = countryData[kRegionKey];
+    
+    Country *country = [self convertDataToCountry:countryData];
+    NSArray *countries = [[NSArray alloc] initWithObjects:country, nil];
+    
+    SubRegion *subRegion = [[SubRegion alloc] initWithName:name region:regionName countries:countries];
+    
+    return subRegion;
 }
 
 + (Country *)convertDataToCountry:(NSDictionary *)countryData

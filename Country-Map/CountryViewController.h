@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 #import "CMViewController.h"
+#import "SubRegion.h"
 
 @interface CountryViewController : CMViewController
 
-@property (nonatomic, strong) NSString *region;
+@property (nonatomic, strong) SubRegion *subRegion;
 
 @end

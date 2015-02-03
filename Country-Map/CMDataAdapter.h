@@ -10,6 +10,7 @@
 
 @interface CMDataAdapter : NSObject
 
++ (NSArray *)convertDataToSubRegions:(NSArray *)countryData;
 + (NSArray *)convertDataToCountries:(NSArray *)countryData;
 
 @end
