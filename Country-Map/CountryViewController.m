@@ -29,6 +29,7 @@
 - (void)loadCountriesForSubRegion:(SubRegion *)subRegion
 {
     self.countries = [self.subRegion countries];
+    [self.navigationItem setTitle:[self.subRegion name]];
     [self.tableView reloadData];
 }
 

@@ -71,6 +71,7 @@
 {
     [super viewDidLoad];
 
+    [self.navigationItem setTitle:self.region];
     [self loadSubRegionsForRegion:self.region];
 }
 
