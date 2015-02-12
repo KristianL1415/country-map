@@ -35,7 +35,6 @@
         latitude += country.latitude;
         longitude += country.longitude;
         
-        //FIXME: This might be a flawed approach with negative values
         if (country.latitude > maxLatitude)
         {
             maxLatitude = country.latitude;
@@ -44,6 +43,7 @@
         {
             minLatitude = country.latitude;
         }
+        //FIXME: This might be a flawed approach with negative values
         if (country.longitude > maxLongitude)
         {
             maxLongitude = country.latitude;
