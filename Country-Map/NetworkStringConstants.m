@@ -10,7 +10,7 @@
 
 @implementation NetworkStringConstants
 
-NSString *const kBaseUrlString = @"http://restcountries.eu/rest/v1/";
+NSString *const kBaseUrlString = @"https://restcountries.eu/rest/v1/";
 NSString *const kAllCountriesSlug = @"all/";
 NSString *const kRegionSlug = @"region/";
 NSString *const kSubRegionSlug = @"subregion/";
