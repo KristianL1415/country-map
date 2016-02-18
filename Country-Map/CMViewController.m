@@ -16,9 +16,9 @@
 
 #pragma mark - Instance Methods
 
-- (void)displayError:(NSString *)message error:(NSError *)error
+- (void)displayError:(NSError *)error withTitle:(NSString *)title
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:message
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:[error localizedDescription]
                                                        delegate:nil
                                               cancelButtonTitle:@"Ok"

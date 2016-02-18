@@ -133,10 +133,9 @@
 		9944AAD31A7847D70073B652 /* Country-Map */ = {
 			isa = PBXGroup;
 			children = (
-				9944AAFC1A784D2A0073B652 /* API */,
-				9944AB011A7855270073B652 /* Models */,
-				9944AAFA1A7847F90073B652 /* Controllers */,
-				9944AAFB1A784C5F0073B652 /* App */,
+				9944AAFB1A784C5F0073B652 /* Config */,
+				99F54FB61C766F49004C4782 /* App */,
+				99F54FB71C766F8A004C4782 /* UI */,
 				9944AAE11A7847D80073B652 /* Images.xcassets */,
 				9944AAD41A7847D70073B652 /* Supporting Files */,
 			);
@@ -169,33 +168,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9944AAFA1A7847F90073B652 /* Controllers */ = {
+		9944AAFA1A7847F90073B652 /* Regions */ = {
 			isa = PBXGroup;
 			children = (
 				9944AB081A7858160073B652 /* RegionViewController.h */,
 				9944AB091A7858160073B652 /* RegionViewController.m */,
-				991BBEB31A81483100742AFD /* SubRegionViewController.h */,
-				991BBEB41A81483100742AFD /* SubRegionViewController.m */,
-				9944AB171A7BFAA60073B652 /* CountryViewController.h */,
-				9944AB181A7BFAA60073B652 /* CountryViewController.m */,
-				995483131A7C3FEC00C01A65 /* CountryDetailViewController.h */,
-				995483141A7C3FEC00C01A65 /* CountryDetailViewController.m */,
-				9944AB1A1A7BFC3D0073B652 /* CMViewController.h */,
-				9944AB1B1A7BFC3D0073B652 /* CMViewController.m */,
 			);
-			name = Controllers;
+			name = Regions;
 			sourceTree = "<group>";
 		};
-		9944AAFB1A784C5F0073B652 /* App */ = {
+		9944AAFB1A784C5F0073B652 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				995483121A7C293B00C01A65 /* Helpers */,
 				9944AAD81A7847D70073B652 /* AppDelegate.h */,
 				9944AAD91A7847D70073B652 /* AppDelegate.m */,
-				9944AADE1A7847D70073B652 /* Main.storyboard */,
 				9944AAE31A7847D80073B652 /* LaunchScreen.xib */,
 			);
-			name = App;
+			name = Config;
 			sourceTree = "<group>";
 		};
 		9944AAFC1A784D2A0073B652 /* API */ = {
@@ -231,6 +221,48 @@
 				991BBEAE1A800EE800742AFD /* CMMapViewExtension.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		99F54FB61C766F49004C4782 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9944AAFC1A784D2A0073B652 /* API */,
+				9944AB011A7855270073B652 /* Models */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		99F54FB71C766F8A004C4782 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9944AADE1A7847D70073B652 /* Main.storyboard */,
+				9944AB1A1A7BFC3D0073B652 /* CMViewController.h */,
+				9944AB1B1A7BFC3D0073B652 /* CMViewController.m */,
+				9944AAFA1A7847F90073B652 /* Regions */,
+				99F54FB81C766FAA004C4782 /* Subregions */,
+				99F54FB91C767026004C4782 /* Country */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		99F54FB81C766FAA004C4782 /* Subregions */ = {
+			isa = PBXGroup;
+			children = (
+				9944AB171A7BFAA60073B652 /* CountryViewController.h */,
+				9944AB181A7BFAA60073B652 /* CountryViewController.m */,
+				991BBEB31A81483100742AFD /* SubRegionViewController.h */,
+				991BBEB41A81483100742AFD /* SubRegionViewController.m */,
+			);
+			name = Subregions;
+			sourceTree = "<group>";
+		};
+		99F54FB91C767026004C4782 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				995483131A7C3FEC00C01A65 /* CountryDetailViewController.h */,
+				995483141A7C3FEC00C01A65 /* CountryDetailViewController.m */,
+			);
+			name = Country;
 			sourceTree = "<group>";
 		};
 		ACF0E20461A940702E07A389 /* Pods */ = {

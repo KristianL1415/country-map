@@ -29,7 +29,7 @@
     [CMDataService loadSubRegionsInRegion:region withBlock:^(NSArray *data, NSError *error) {
         if (error)
         {
-            [self displayError:@"Error Retrieving Data" error:error];
+            [self displayError:error withTitle:@"Error Retrieving Data"];
         }
         else
         {

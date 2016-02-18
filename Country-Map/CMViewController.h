@@ -10,6 +10,6 @@
 
 @interface CMViewController : UIViewController
 
-- (void)displayError:(NSString *)message error:(NSError *)error;
+- (void)displayError:(NSError *)error withTitle:(NSString *)title;
 
 @end

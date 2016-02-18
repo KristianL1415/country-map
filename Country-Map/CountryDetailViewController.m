@@ -22,6 +22,16 @@
 
 @implementation CountryDetailViewController
 
+#pragma mark - Override Methods
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self setupInterface];
+    [self setupMapView];
+}
+
 #pragma mark - Instance Methods
 
 - (void)setupInterface
@@ -42,16 +52,6 @@
     MKCoordinateRegion region = [CMMapViewExtension getRegionForCountryCoordinate:countryLocation withArea:self.country.area mapView:self.mapView];
     
     [self.mapView setRegion:region animated:YES];
-}
-
-#pragma mark - Override Methods
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    [self setupInterface];
-    [self setupMapView];
 }
 
 @end
