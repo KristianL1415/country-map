@@ -10,6 +10,6 @@
 
 #import "CMViewController.h"
 
-@interface RegionViewController : CMViewController <UITableViewDataSource, UITableViewDelegate>
+@interface RegionViewController : CMViewController
 
 @end

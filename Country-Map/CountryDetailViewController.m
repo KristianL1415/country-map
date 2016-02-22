@@ -36,20 +36,19 @@
 
 - (void)setupInterface
 {
-    [self.navigationItem setTitle:[self.country name]];
-    [self.nameLabel setText:[self.country name]];
-    [self.regionLabel setText:[self.country region]];
-    [self.subRegionLabel setText:[self.country subRegion]];
-    [self.capitalLabel setText:[self.country capital]];
+    self.navigationItem.title = self.country.name;
+    self.nameLabel.text = self.country.name;
+    self.regionLabel.text = self.country.region;
+    self.subRegionLabel.text = self.country.subRegion;
+    self.capitalLabel.text = self.country.capital;
 }
 
 - (void)setupMapView
 {
-    [self.mapView setDelegate:self];
+    self.mapView.delegate = self;
     
-    CLLocationCoordinate2D countryLocation = CLLocationCoordinate2DMake(self.country.latitude, self.country.longitude);
-    
-    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountryCoordinate:countryLocation withArea:self.country.area mapView:self.mapView];
+    CLLocationCoordinate2D countryLocation = CLLocationCoordinate2DMake(self.country.latitude.doubleValue, self.country.longitude.doubleValue);
+    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountryCoordinate:countryLocation withArea:self.country.area.doubleValue mapView:self.mapView];
     
     [self.mapView setRegion:region animated:YES];
 }

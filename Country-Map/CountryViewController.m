@@ -24,52 +24,6 @@
 
 @implementation CountryViewController
 
-#pragma mark - Instance Methods
-
-- (void)loadCountriesForSubRegion:(SubRegion *)subRegion
-{
-    self.countries = [self.subRegion countries];
-    [self.navigationItem setTitle:[self.subRegion name]];
-    [self.tableView reloadData];
-}
-
-- (void)setupMapView
-{
-    [self.mapView setDelegate:self];
-    
-    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountries:self.countries mapView:self.mapView];
-    
-    [self.mapView setRegion:region animated:YES];
-}
-
-#pragma mark - Table View Methods
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:kCountryCell];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] init];
-    }
-    
-    [cell.textLabel setText:[self.countries[indexPath.row] name]];
-    
-    return cell;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return [self.countries count];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - Override Methods
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -86,6 +40,45 @@
         CountryDetailViewController *destinationController = segue.destinationViewController;
         [destinationController setCountry:[self.countries objectAtIndex:indexPath.row]];
     }
+}
+
+#pragma mark - Instance Methods
+
+- (void)loadCountriesForSubRegion:(SubRegion *)subRegion
+{
+    self.countries = [self.subRegion countries];
+    [self.navigationItem setTitle:[self.subRegion name]];
+    [self.tableView reloadData];
+}
+
+- (void)setupMapView
+{
+    self.mapView.delegate = self;
+    
+    MKCoordinateRegion region = [CMMapViewExtension getRegionForCountries:self.countries mapView:self.mapView];
+    
+    [self.mapView setRegion:region animated:YES];
+}
+
+#pragma mark - Table View
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:kCountryCell forIndexPath:indexPath];
+    
+    cell.textLabel.text = [self.countries[indexPath.row] name];
+    
+    return cell;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.countries.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

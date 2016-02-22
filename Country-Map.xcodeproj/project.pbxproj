@@ -137,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9944AAFB1A784C5F0073B652 /* Config */,
-				99F54FB61C766F49004C4782 /* App (Core?) */,
+				99F54FB61C766F49004C4782 /* Core */,
 				99F54FB71C766F8A004C4782 /* UI */,
 				9944AAE11A7847D80073B652 /* Images.xcassets */,
 				9944AAD41A7847D70073B652 /* Supporting Files */,
@@ -226,14 +226,14 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		99F54FB61C766F49004C4782 /* App (Core?) */ = {
+		99F54FB61C766F49004C4782 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				99F54FBA1C7670E3004C4782 /* Assembly */,
+				99F54FBA1C7670E3004C4782 /* Dependencies */,
 				9944AAFC1A784D2A0073B652 /* API */,
 				9944AB011A7855270073B652 /* Models */,
 			);
-			name = "App (Core?)";
+			name = Core;
 			sourceTree = "<group>";
 		};
 		99F54FB71C766F8A004C4782 /* UI */ = {
@@ -269,13 +269,13 @@
 			name = Country;
 			sourceTree = "<group>";
 		};
-		99F54FBA1C7670E3004C4782 /* Assembly */ = {
+		99F54FBA1C7670E3004C4782 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
 				99F54FBB1C76711C004C4782 /* CountryAssembly.h */,
 				99F54FBC1C76711C004C4782 /* CountryAssembly.m */,
 			);
-			name = Assembly;
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 		ACF0E20461A940702E07A389 /* Pods */ = {

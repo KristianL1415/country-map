@@ -10,14 +10,22 @@
 
 @interface Country : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *region;
-@property (nonatomic, strong) NSString *subRegion;
-@property (nonatomic, strong) NSString *capital;
-@property (nonatomic, assign) double latitude;
-@property (nonatomic, assign) double longitude;
-@property (nonatomic, assign) double area;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *region;
+@property (nonatomic, copy) NSString *subRegion;
+@property (nonatomic, copy) NSString *capital;
+@property (nonatomic, copy) NSNumber *latitude;
+@property (nonatomic, copy) NSNumber *longitude;
+@property (nonatomic, copy) NSNumber *area;
 
-- (instancetype) initWithName:(NSString *)name region:(NSString *)region subRegion:(NSString *)subRegion capital:(NSString *)capital latitude:(double)lat longitude:(double)lng area:(double)area;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+- (instancetype)initWithName:(NSString *)name
+                      region:(NSString *)region
+                   subRegion:(NSString *)subRegion
+                     capital:(NSString *)capital
+                    latitude:(double)lat
+                   longitude:(double)lng
+                        area:(double)area;
 
 @end

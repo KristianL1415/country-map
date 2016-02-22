@@ -10,10 +10,10 @@
 
 @interface SubRegion : NSObject
 
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *regionName;
-@property (nonatomic, strong) NSMutableArray *countries;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *regionName;
+@property (nonatomic, copy) NSMutableArray *countries;
 
-- (instancetype) initWithName:(NSString *)name region:(NSString *)regionName countries:(NSArray *)countries;
+- (instancetype)initWithName:(NSString *)name region:(NSString *)regionName countries:(NSArray *)countries;
 
 @end

@@ -14,6 +14,13 @@
 
 @implementation CMViewController
 
+#pragma mark - Override Methods
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
 #pragma mark - Instance Methods
 
 - (void)displayError:(NSError *)error withTitle:(NSString *)title
@@ -24,13 +31,6 @@
                                               cancelButtonTitle:@"Ok"
                                               otherButtonTitles:nil];
     [alertView show];
-}
-
-#pragma mark - Override Methods
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 }
 
 @end

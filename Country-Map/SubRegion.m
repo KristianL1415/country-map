@@ -16,9 +16,9 @@
     
     if (self)
     {
-        self.name = name;
-        self.regionName = regionName;
-        self.countries = [[NSMutableArray alloc] initWithArray:countries];
+        _name = name;
+        _regionName = regionName;
+        _countries = countries.mutableCopy;
     }
     
     return self;

@@ -14,13 +14,30 @@
 
 @interface SubRegionViewController ()
 
-@property (nonatomic, strong) NSArray *subRegions;
-
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *subRegions;
 
 @end
 
 @implementation SubRegionViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.navigationItem setTitle:self.region];
+    [self loadSubRegionsForRegion:self.region];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:kCountriesSegue])
+    {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CountryViewController *destinationController = segue.destinationViewController;
+        [destinationController setSubRegion:[self.subRegions objectAtIndex:indexPath.row]];
+    }
+}
 
 #pragma mark - Instance Methods
 
@@ -43,12 +60,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:kSubRegionCell];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] init];
-    }
+    UITableViewCell *cell  = [tableView dequeueReusableCellWithIdentifier:kSubRegionCell forIndexPath:indexPath];
     
     [cell.textLabel setText:[[self.subRegions objectAtIndex:indexPath.row] name]];
     
@@ -63,26 +75,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - Override Methods
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    [self.navigationItem setTitle:self.region];
-    [self loadSubRegionsForRegion:self.region];
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:kCountriesSegue])
-    {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        CountryViewController *destinationController = segue.destinationViewController;
-        [destinationController setSubRegion:[self.subRegions objectAtIndex:indexPath.row]];
-    }
 }
 
 @end
