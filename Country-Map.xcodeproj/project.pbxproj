@@ -27,6 +27,7 @@
 		9944AB1C1A7BFC3D0073B652 /* CMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9944AB1B1A7BFC3D0073B652 /* CMViewController.m */; };
 		995483111A7C0A3800C01A65 /* StringConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 995483101A7C0A3800C01A65 /* StringConstants.m */; };
 		995483151A7C3FEC00C01A65 /* CountryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995483141A7C3FEC00C01A65 /* CountryDetailViewController.m */; };
+		99F54FBD1C76711C004C4782 /* CountryAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F54FBC1C76711C004C4782 /* CountryAssembly.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		995483101A7C0A3800C01A65 /* StringConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringConstants.m; sourceTree = "<group>"; };
 		995483131A7C3FEC00C01A65 /* CountryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDetailViewController.h; sourceTree = "<group>"; };
 		995483141A7C3FEC00C01A65 /* CountryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryDetailViewController.m; sourceTree = "<group>"; };
+		99F54FBB1C76711C004C4782 /* CountryAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryAssembly.h; sourceTree = "<group>"; };
+		99F54FBC1C76711C004C4782 /* CountryAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryAssembly.m; sourceTree = "<group>"; };
 		9F75A14AB7B9F40E30A70608 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D0F65AF47B71F9643971F32B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,7 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				9944AAFB1A784C5F0073B652 /* Config */,
-				99F54FB61C766F49004C4782 /* App */,
+				99F54FB61C766F49004C4782 /* App (Core?) */,
 				99F54FB71C766F8A004C4782 /* UI */,
 				9944AAE11A7847D80073B652 /* Images.xcassets */,
 				9944AAD41A7847D70073B652 /* Supporting Files */,
@@ -223,13 +226,14 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
-		99F54FB61C766F49004C4782 /* App */ = {
+		99F54FB61C766F49004C4782 /* App (Core?) */ = {
 			isa = PBXGroup;
 			children = (
+				99F54FBA1C7670E3004C4782 /* Assembly */,
 				9944AAFC1A784D2A0073B652 /* API */,
 				9944AB011A7855270073B652 /* Models */,
 			);
-			name = App;
+			name = "App (Core?)";
 			sourceTree = "<group>";
 		};
 		99F54FB71C766F8A004C4782 /* UI */ = {
@@ -263,6 +267,15 @@
 				995483141A7C3FEC00C01A65 /* CountryDetailViewController.m */,
 			);
 			name = Country;
+			sourceTree = "<group>";
+		};
+		99F54FBA1C7670E3004C4782 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				99F54FBB1C76711C004C4782 /* CountryAssembly.h */,
+				99F54FBC1C76711C004C4782 /* CountryAssembly.m */,
+			);
+			name = Assembly;
 			sourceTree = "<group>";
 		};
 		ACF0E20461A940702E07A389 /* Pods */ = {
@@ -438,6 +451,7 @@
 				991BBEB21A80118D00742AFD /* SubRegion.m in Sources */,
 				991BBEB51A81483100742AFD /* SubRegionViewController.m in Sources */,
 				9944AB0A1A7858160073B652 /* RegionViewController.m in Sources */,
+				99F54FBD1C76711C004C4782 /* CountryAssembly.m in Sources */,
 				9944AB041A78554F0073B652 /* Country.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
